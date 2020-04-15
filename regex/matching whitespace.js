@@ -1,3 +1,4 @@
+// this is normally done using \s 
 const myStr="These are the days we will we never forget";
 const myRegex=/\s/g;
 console.log(
