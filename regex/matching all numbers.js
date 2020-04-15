@@ -11,3 +11,6 @@ const myRegex=/\d/g;
 console.log(numVar.match(myRegex));
 
 // [ '2', '0', '0', '1' ] the /d returns all numeric characters
+
+console.log(numVar.match(myRegex).length);
+//4
