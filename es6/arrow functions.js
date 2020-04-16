@@ -45,3 +45,35 @@ console.log(numbers);
 let square=x=>x*x;
 
 console.log(square(2)); //4
+
+
+//arrow functions with objects
+
+let addColor=function(color){
+    return {value:color}
+}
+
+console.log(addColor("Blue"));
+
+//returns { value: 'Blue' }
+
+let backgroundColor=addColor("Chocolate");
+console.log(backgroundColor.value);
+
+//returns 'Chocolate'
+
+
+// this can be rewritten using arrow functions
+
+let setColor=color=>{value:color};
+
+console.log(setColor("Yellow"));//undefined
+
+//solve this by using parens
+
+let SetColor=color=>({value:color});
+
+console.log(SetColor("Yellow")); //{ value: 'Yellow' }
+
+
+
