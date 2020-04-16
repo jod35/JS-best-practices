@@ -77,3 +77,44 @@ console.log(SetColor("Yellow")); //{ value: 'Yellow' }
 
 
 
+//AN ARROW FUNCTION CAN NEVER BE USED AS A CONSTRUCTOR
+//JS functions and the this variable
+
+function Car(){
+    this.speed=0;
+    this.setSpeed=function(speed){
+        this.speed=speed;
+        setTimeout(
+            function(speed){
+                  console.log(speed);
+            },1000
+        )
+    }
+}
+// that is a car constructor function
+// to create a new car Object,
+
+let voxy=new Car();
+voxy.setSpeed(1000000);
+//Car { speed: 1000000, setSpeed: [Function] }
+
+console.log(voxy); //undefined
+
+/*to solve this, we put the this keyword in a variable that can be accessed
+out of the function*/
+
+
+function Dog(){
+    this.name=name;
+    this.setAge=function(){
+        let set=this;
+        setTimeout(function(age){
+            
+            console.log(self.age);
+            
+        }, 1000);
+    }
+}
+let zoey =new Dog();
+
+zoey.setAge(2);
