@@ -25,3 +25,51 @@ const person ={
 person.name="Jonah";
 console.log(person);
 // { name: 'Jonah', age: 23, gender: 'Male' }
+
+// in order for us to make an object immutable
+
+var man=Object.freeze({name:"JOnathan",age:21});
+
+man.name="Jona";
+console.log(man);
+
+// { name: 'JOnathan', age: 21 } meaning that it has not changed
+
+
+/* the Object.freeze method is shallow which means it can make an object immutable but cannot 
+change the object properties of an object*/
+
+//forexample
+
+const pupil=Object.freeze({
+    name:"Jonathan",
+    age:21,
+    location:{
+        country:"Uganda",
+        city:"Kampala",
+        street:"Lumumba Street"
+    }
+});
+
+console.log(pupil);
+
+/*
+{ name: 'Jonathan',
+  age: 21,
+  location:
+   { country: 'Uganda', city: 'Kampala', street: 'Lumumba Street' } }*/
+
+// changing the properties
+pupil.location.city="Mombasa";
+
+console.log(pupil);
+
+/*
+{ name: 'Jonathan',
+  age: 21,
+  location:
+   { country: 'Uganda', city: 'Mombasa', street: 'Lumumba Street' } }
+*/
+
+
+
