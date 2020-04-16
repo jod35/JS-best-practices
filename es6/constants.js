@@ -84,4 +84,33 @@ colors.pop()
 // returns []
 
 
+//const in for loops
 
+let scores=[23,34,45,60];
+
+for(let x of scores){
+    console.log(x);
+}
+
+/*
+23
+34
+45
+60
+*/
+console.log("\n");
+
+let myscores=[23,34,56,67,10];
+for(const i of myscores){
+    console.log(i);
+}
+
+/*
+23
+34
+56
+67
+10
+*/
+
+//const makes variables not reassignable
