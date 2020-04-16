@@ -104,17 +104,4 @@ console.log(voxy); //undefined
 out of the function*/
 
 
-function Dog(){
-    this.name=name;
-    this.setAge=function(){
-        let set=this;
-        setTimeout(function(age){
-            
-            console.log(self.age);
-            
-        }, 1000);
-    }
-}
-let zoey =new Dog();
 
-zoey.setAge(2);
