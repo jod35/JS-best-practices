@@ -40,3 +40,8 @@ numbers.sort((a,b)=>b-a);
 console.log(numbers);
 // [ 56, 45, 43, 22 ]
 
+//using a single param
+
+let square=x=>x*x;
+
+console.log(square(2)); //4
