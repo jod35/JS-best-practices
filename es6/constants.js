@@ -69,7 +69,19 @@ console.log(pupil);
   age: 21,
   location:
    { country: 'Uganda', city: 'Mombasa', street: 'Lumumba Street' } }
+
 */
+
+//const with arrays
+
+const colors=[];
+colors.push('green');
+
+console.log(colors);
+//returns [ 'green' ]
+
+colors.pop()
+// returns []
 
 
 
