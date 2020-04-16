@@ -45,3 +45,77 @@ console.log(numbers);
 let square=x=>x*x;
 
 console.log(square(2)); //4
+
+
+//arrow functions with objects
+
+let addColor=function(color){
+    return {value:color}
+}
+
+console.log(addColor("Blue"));
+
+//returns { value: 'Blue' }
+
+let backgroundColor=addColor("Chocolate");
+console.log(backgroundColor.value);
+
+//returns 'Chocolate'
+
+
+// this can be rewritten using arrow functions
+
+let setColor=color=>{value:color};
+
+console.log(setColor("Yellow"));//undefined
+
+//solve this by using parens
+
+let SetColor=color=>({value:color});
+
+console.log(SetColor("Yellow")); //{ value: 'Yellow' }
+
+
+
+//AN ARROW FUNCTION CAN NEVER BE USED AS A CONSTRUCTOR
+//JS functions and the this variable
+
+function Car(){
+    this.speed=0;
+    this.setSpeed=function(speed){
+        this.speed=speed;
+        setTimeout(
+            function(speed){
+                  console.log(speed);
+            },1000
+        )
+    }
+}
+// that is a car constructor function
+// to create a new car Object,
+
+let voxy=new Car();
+voxy.setSpeed(1000000);
+//Car { speed: 1000000, setSpeed: [Function] }
+
+console.log(voxy); //undefined
+
+/*to solve this, we put the this keyword in a variable that can be accessed
+out of the function*/
+
+
+function Dog(){
+    this.age=0;
+
+    this.setAge=function(age){
+        this.age=age;
+        let self=this;
+        setTimeout(function(){
+            console.log(self.age);
+        },1000);
+    }
+}
+
+let zoey= new Dog();
+
+zoey.setAge(10); //10
