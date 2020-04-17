@@ -56,3 +56,27 @@ function add(x=1,y=x,z=x+y){
 }
 console.log(add(1,2,3)); //6
 
+
+
+
+
+//javascript rest params
+// the rest parameter help us to give an infinite amount of args
+
+function fn (a1,a2,...args){
+    //.....
+}
+
+//forexample
+function sum(...args){
+    let total=0;
+    for (const a of args){
+        total+=a;
+    }
+    return total;
+    
+}
+
+console.log(sum(1,2,3)); //6
+
+  
