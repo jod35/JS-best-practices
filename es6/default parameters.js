@@ -37,3 +37,22 @@ function today(){
 }
 
 date(); //Fri Apr 17 2020
+
+//we can also make args mandatory
+function argRequired(){
+    throw new Error("The arguement is required");
+}
+
+function add(x=argRequired(),y=argRequired()){
+    console.log(x+y);
+}
+
+add(10,34); //44
+add(23); //throws error
+
+// using other params in default values
+function add(x=1,y=x,z=x+y){
+    return x+y+z;
+}
+console.log(add(1,2,3)); //6
+
