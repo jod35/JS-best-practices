@@ -53,3 +53,48 @@ console.log(mymachine);
 // { 'machine name': 'Jonathan', age: 21 }
 
 
+//we can also do this
+let jodsmachine='machine';
+let newmachine={
+    [jodsmachine +' name']:"Whitney",
+    [jodsmachine +' age']:21
+}
+console.log(newmachine);
+// { machine name: 'Whitney', machine age: 21 }
+
+
+//when making an object literal,we can set the name and the function definition as shown 
+//below
+
+// let server={
+//     name:'server',
+//     restart:()=>{
+//         console.log('The '+this.name + " is restarting.....");
+//     }
+// }
+
+//this in es6 is transformed into
+
+let server={
+    name:'server',
+    restart(){
+        console.log('The '+this.name + " is restarting.....");
+    }
+}
+
+//it also valid to have spaces in the property name
+
+let myserver={
+    name:"Server",
+    restart(){
+        console.log(`The ${this.name} is restarting.....`);
+    },
+    'start machine'(){
+         console.log(`The ${this.name} is starting....`);
+         
+    }
+};
+
+
+console.log(myserver.restart());
+
