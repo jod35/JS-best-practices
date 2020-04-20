@@ -4,5 +4,6 @@
 I am documenting my learning from the basic to the advanced concepts like 
 - ES6
 - Regex
+- Debugging
 - Data Structures and Algorithms
  
