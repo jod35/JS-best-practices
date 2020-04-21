@@ -4,7 +4,7 @@ let myDog={
     name:"Zoey",
     age:4,
     sayname:function(){
-        return `My name is ${this.name}`
+        return `My name is ${myDog.name}`
     }
 }
 
