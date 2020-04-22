@@ -7,4 +7,5 @@ I am documenting my learning from the basic to the advanced concepts like
 - Debugging
 - Data Structures and Algorithms
 - Object Oriented Programming
+- Functional Programming
  
