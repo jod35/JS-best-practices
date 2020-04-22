@@ -3,7 +3,7 @@ function Bird() { }
 function Dog() { }
 
 Bird.prototype = Object.create(Animal.prototype);
-Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype = Object.create(Animal.prototype); //inheriting from the constructor Animal
 
 // Only change code below this line
 Bird.prototype.constructor=Bird;
